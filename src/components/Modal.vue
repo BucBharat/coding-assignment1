@@ -64,5 +64,21 @@ export default {
       this.$emit('close-modal');
     },
   },
+  computed: {
+    mailTo() {
+      return 'mailto:' + this.currentUser.email;
+    },
+  },
 };
 </script>
+
+<style scoped>
+a,
+a:hover,
+a:focus,
+a:active {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+</style>
