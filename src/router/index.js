@@ -31,7 +31,6 @@ const routes = [
     component: Login,
     beforeEnter: loginAuthenticator,
   },
-
   {
     path: '/login',
     name: 'Login',
