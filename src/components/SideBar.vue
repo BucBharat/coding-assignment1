@@ -59,5 +59,10 @@ export default {
       drawer: false,
     };
   },
+  methods: {
+    closeSideBar() {
+      this.$emit('close-sidebar');
+    },
+  },
 };
 </script>

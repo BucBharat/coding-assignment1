@@ -1,6 +1,6 @@
 <template>
   <div id="pageLayout">
-    <SideBar />
+    <SideBar @close-sidebar="signOut" />
 
     <v-row class="mt-14 ml-3">
       <v-col
