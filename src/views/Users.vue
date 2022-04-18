@@ -1,6 +1,34 @@
 <template>
   <div id="pageLayout">
-    <v-row>
+    <v-row class="pt-3">
+      <v-navigation-drawer fixed permanent left>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-domain</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>Company Name</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider></v-divider>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>Menu element</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>Menu element</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>Menu element</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-navigation-drawer>
+
       <v-col
         cols="12"
         sm="4"
