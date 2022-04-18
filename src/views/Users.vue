@@ -35,6 +35,19 @@
           <v-list-item-title>Menu element</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+      <template v-slot:append>
+        <v-list-item>
+          <v-btn block color="blue" @click="signOut">
+            <v-list-item-icon>
+              <v-icon>mdi-logout</v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title>Admin</v-list-item-title>
+            </v-list-item-content>
+          </v-btn>
+        </v-list-item>
+      </template>
     </v-navigation-drawer>
 
     <v-row class="mt-14">
@@ -143,20 +156,10 @@ export default {
       this.dialog = true;
       this.currentUser = user;
     },
-    showModal(user) {
-      this.modalDisplay = true;
-      this.currentUser = user;
-    },
-    closeModal() {
-      this.modalDisplay = false;
-      this.currentUser = null;
-    },
+
     signOut() {
       localStorage.removeItem('accessToken');
       this.$router.push({ name: 'Login' });
-    },
-    showMobileSideBar() {
-      this.mobileSideBarVar = !this.mobileSideBarVar;
     },
   },
   computed: {
