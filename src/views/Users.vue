@@ -86,13 +86,14 @@
         <v-card
           id="dialogBox"
           v-if="currentUser != null"
-          class="mx-auto"
+          class="mx-auto pa-0 ma-0 rounded-lg"
           outlined
+          flat
         >
           <v-list-item class="pa-0 ma-0">
             <v-img
               :src="currentUser.image"
-              class="white--text align-center text-center"
+              class="white--text align-center text-center rounded-lg"
               gradient="to bottom,
             rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="450px"
