@@ -37,7 +37,7 @@
       </v-list-item>
       <template v-slot:append>
         <v-list-item>
-          <v-btn block color="blue" @click="signOut">
+          <v-btn block color="blue" @click="closeSideBar">
             <v-list-item-icon>
               <v-icon>mdi-logout</v-icon>
             </v-list-item-icon>
