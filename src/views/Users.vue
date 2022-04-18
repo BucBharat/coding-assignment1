@@ -1,34 +1,43 @@
 <template>
   <div id="pageLayout">
-    <v-row class="pt-3">
-      <v-navigation-drawer fixed permanent left>
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon>mdi-domain</v-icon>
-          </v-list-item-icon>
+    <v-app-bar
+      absolute
+      class="mb-3"
+      color="white"
+      elevate-on-scroll
+      scroll-target="#scrolling-techniques-7"
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" fixed left app clipped>
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-domain</v-icon>
+        </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>Company Name</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-divider></v-divider>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Menu element</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Menu element</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>Menu element</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-navigation-drawer>
+        <v-list-item-content>
+          <v-list-item-title>Company Name</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-divider></v-divider>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>Menu element</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>Menu element</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>Menu element</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-navigation-drawer>
 
+    <v-row class="mt-14">
       <v-col
         cols="12"
         sm="4"
@@ -126,6 +135,7 @@ export default {
       currentUser: null,
       mobileSideBarVar: false,
       dialog: false,
+      drawer: false,
     };
   },
   methods: {
