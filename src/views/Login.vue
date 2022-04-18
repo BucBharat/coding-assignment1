@@ -67,7 +67,6 @@ export default {
   methods: {
     login() {
       if (this.username === 'admin' && this.password === '1234') {
-        // alert('Entered correct details');
         localStorage.setItem('accessToken', true);
         this.showAlert = false;
         this.$router.push({ name: 'Users' });
